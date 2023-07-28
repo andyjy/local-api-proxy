@@ -1,0 +1,23 @@
+{
+  "name": "local-api-proxy",
+  "description": "local service to receive HTTP requests on a local port and proxy to a remote server, logging the requests and responses",
+  "scripts": {
+    "dev": "concurrently \"next dev --port 6542\" \"npx local-ssl-proxy --source 6543 --target 6542 --key localhost.ssl-key.pem --cert localhost.ssl.pem\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^13.4.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.14",
+    "concurrently": "^7.5.0",
+    "local-ssl-proxy": "2.0.5",
+    "typescript": "^5.1.3"
+  },
+  "engines": {
+    "node": "^18.0.0"
+  }
+}
