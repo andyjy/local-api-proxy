@@ -2,7 +2,7 @@
   "name": "local-api-proxy",
   "description": "local service to receive HTTP requests on a local port and proxy to a remote server, logging the requests and responses",
   "scripts": {
-    "dev": "concurrently \"next dev --port 6542\" \"npx local-ssl-proxy --source 6543 --target 6542 --key localhost.ssl-key.pem --cert localhost.ssl.pem\"",
+    "dev": "concurrently \"next dev --port 4433\" \"npx local-ssl-proxy --source 443 --target 4433 --key api.fly.io-key.pem --cert api.fly.io.pem\"",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
